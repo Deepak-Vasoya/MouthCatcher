@@ -50,7 +50,7 @@ def resetObject():
 
 while True:
     success, img = cap.read()
-
+    img = cv2.flip(img, 1)  # Flip horizontally for a mirror effect
     if gameOver is False:
         img, faces = detector.findFaceMesh(img, draw=False)
 
